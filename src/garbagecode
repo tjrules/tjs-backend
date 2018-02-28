@@ -1,0 +1,82 @@
+<div className="Header">
+  <nav className="navbar navbar-default">
+    <div className="container-fluid">
+      <div className="navbar-header">
+        <a className="navbar-brand" href="#">Blog App</a>
+      </div>
+      <ul className="nav navbar-nav">
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/register'>Sign Up</Link></li>
+        <li><Link to='/login'>Log In</Link></li>
+        <li><Link to='/admin'>Admin</Link></li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+
+<NavItem href="/">Home</NavItem>
+<NavItem href="/login">Login</NavItem>
+<NavItem href="/register">Sign Up</NavItem>
+<NavItem href="/admin">Admin</NavItem>
+
+
+<div className='sign-in'>
+
+  <Header />
+
+  {(this.state.loggedInName) ? <div id="welcome">Welcome, {this.state.loggedInName}</div> : <div id="log-in">Please Log In</div>}
+
+  <form onSubmit={this.handleSubmit}>
+    <input type='text' onChange={this.handleChange} name='username' placeholder='username' />
+    <br />
+    <input type='text' onChange={this.handleChange} name='password' placeholder='password' />
+    <br />
+    <input type='submit' value='Sign In' />
+  </form>
+
+  {this.state.fireRedirect ? <Redirect to='/admin' /> : ''}
+</div>
+
+<div className='sign-up'>
+  <Header />
+
+  <div id="join">Welcome! Sign up for This Blog here</div>
+  <form onSubmit={this.handleSubmit}>
+    <input type='text' onChange={this.handleChange} name='email' placeholder='email' />
+    <br />
+    <input type='text' onChange={this.handleChange} name='username' placeholder='username' />
+    <br />
+    <input type='text' onChange={this.handleChange} name='password' placeholder='password' />
+    <br />
+    <input type='submit' value='Sign Up' />
+  </form>
+  {this.state.fireRedirect ? <Redirect to='/' /> : ''}
+</div>
+
+
+<div id="add-entry">Create a new post</div>
+
+<form onSubmit={this.handleFormSubmit}>
+  <input
+    type="text"
+    placeholder="Title"
+    name="title"
+    value={this.state.title}
+    onChange={this.handleInputChange}
+  />
+  <br />
+
+  <textarea
+    type="text"
+    name="content"
+    placeholder="content"
+    value={this.state.content}
+    onChange={this.handleInputChange}>
+  </textarea>
+  <br />
+  <input type="submit" value="Submit" />
+</form>
+{this.state.fireRedirect
+  ? <Redirect to={`/admin`} />
+: ''}
