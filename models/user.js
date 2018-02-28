@@ -18,4 +18,15 @@ User.create = user => {
   `, [user.username, user.email, user.password_digest]);
 };
 
+User.delete = id => {
+  console.log('User delete model running');
+  return db.none(
+    `
+      DELETE FROM users
+      WHERE id = $1
+    `,
+    [id]
+  );
+};
+
 module.exports = User;

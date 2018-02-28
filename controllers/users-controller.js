@@ -23,4 +23,14 @@ usersController.create = (req, res) => {
   });
 }
 
+usersController.delete = (req, res) => {
+ User.delete(req.params.id)
+   .then(user => {
+     res.redirect('/')
+   })
+   .catch(err => {
+     res.status(400).json(err);
+   });
+};
+
 module.exports = usersController;

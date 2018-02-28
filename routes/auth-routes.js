@@ -23,4 +23,5 @@ authRouter.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+authRouter.delete('/:id', usersController.delete);
 module.exports = authRouter;
