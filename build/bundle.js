@@ -3509,7 +3509,7 @@ var PostList = function (_Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'Post List component working'
+            'Welcome!'
           )
         ),
         _react2.default.createElement(

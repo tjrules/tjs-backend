@@ -56,7 +56,7 @@ renderPostsList() {
     return(
       <div className="container-fluid">
 
-      <div className="text-center"><h1>Post List component working</h1></div>
+      <div className="text-center"><h1>Welcome!</h1></div>
         <div className="wrapper">  {this.renderPostsList()} </div>
       </div>
     )
