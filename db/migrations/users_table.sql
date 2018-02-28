@@ -1,4 +1,4 @@
-\c new_blog_app
+
 
 DROP TABLE IF EXISTS users;
 
