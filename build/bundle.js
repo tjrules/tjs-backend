@@ -3460,19 +3460,11 @@ var PostList = function (_Component) {
           console.log('this is posts', posts);
           return _react2.default.createElement(
             'div',
-            { className: 'container' },
+            { className: 'container text-center ' },
             _react2.default.createElement(
               'div',
-              { className: 'media' },
-              _react2.default.createElement(
-                'div',
-                { className: 'media-top media-left' },
-                _react2.default.createElement('img', { src: 'http://res.cloudinary.com/dftzmialt/image/upload/v1519245643/tj_glasses_jwvk9f.jpg', width: '100px' })
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'media-body' },
+              { className: 'media-body media-center' },
+              _react2.default.createElement('img', { src: 'http://res.cloudinary.com/dftzmialt/image/upload/v1519245643/tj_glasses_jwvk9f.jpg', width: '100px' }),
               _react2.default.createElement(
                 'h4',
                 { className: 'media-heading' },
@@ -3596,23 +3588,27 @@ var PostShow = function (_Component) {
       console.log('this is what will render', this.state.posts);
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'container text-center' },
         _react2.default.createElement(
-          'h1',
-          null,
-          this.state.posts.title
-        ),
-        _react2.default.createElement(
-          'h2',
-          null,
-          this.state.posts.content
-        ),
-        _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/' },
-          'Back'
-        ),
-        this.state.fireRedirect ? _react2.default.createElement(_reactRouterDom.Redirect, { push: true, to: '/' }) : ''
+          'div',
+          { className: 'media' },
+          _react2.default.createElement(
+            'h1',
+            null,
+            this.state.posts.title
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            this.state.posts.content
+          ),
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' },
+            'Back'
+          ),
+          this.state.fireRedirect ? _react2.default.createElement(_reactRouterDom.Redirect, { push: true, to: '/' }) : ''
+        )
       );
     }
   }, {

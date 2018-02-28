@@ -25,15 +25,17 @@ class PostShow extends Component {
   renderPost() {
     console.log('this is what will render', this.state.posts)
     return(
-        <div>
+        <div className='container text-center'>
+<div className="media">
         <h1>{this.state.posts.title}</h1>
-        <h2>{this.state.posts.content}</h2>
+        <p>{this.state.posts.content}</p>
         <Link to="/">Back</Link>
         {
           this.state.fireRedirect
             ? <Redirect push to="/"/>
             : ''
         }
+      </div>
       </div>
     )
   }

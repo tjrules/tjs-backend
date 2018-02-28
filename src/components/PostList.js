@@ -35,13 +35,11 @@ renderPostsList() {
     return this.state.apiData.map(posts => {
       console.log('this is posts', posts)
       return(
-        <div className="container">
-        <div className="media">
-          <div className="media-top media-left">
-            <img src="http://res.cloudinary.com/dftzmialt/image/upload/v1519245643/tj_glasses_jwvk9f.jpg" width="100px"/>
-          </div>
-        </div>
-        <div className="media-body">
+        <div className="container text-center ">
+
+        <div className="media-body media-center">
+          <img src="http://res.cloudinary.com/dftzmialt/image/upload/v1519245643/tj_glasses_jwvk9f.jpg" width="100px"/>
+
           <h4 className="media-heading">{posts.title}</h4>
             <p>{posts.content}</p>
             <Link to={`/post/${posts.id}`}>Read more</Link>

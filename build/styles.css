@@ -1,5 +1,6 @@
 body {
   background-color: lightblue;
+  font-family: Lora;
 }
 
 .wrapper {
@@ -8,4 +9,13 @@ body {
 
 .remove-styles {
   list-style-type: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+img{
+   border-radius: 20%;
 }
